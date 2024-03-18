@@ -16,8 +16,14 @@ def exercise_1():
                 print('invalid options')
                 continue
     else:
-        print('try again!!')
-        exercise_1()
+        print('oops!! wrong answer!!')
+        quit = input('do you want to quit? (y/n)').lower()
+        if quit == 'y':
+            main_menu()
+        elif quit == 'n':
+            exercise_1()
+        else:
+            print("wrong ans, try 'y' or 'n': ")
 
 #exercise 2
 def exercise_2():
@@ -28,15 +34,47 @@ def exercise_2():
         while True:
             action = input('try again(a)/ quit(j): ')
             if action == 'a':
-                exercise_1()
+                exercise_2()
             elif action == 'j':
                 main_menu()
             else:
                 print('invalid options')
                 continue
     else:
-        print('try again!!')
-        exercise_2()
+        print('oops!! wrong answer!!')
+        quit = input('do you want to quit? (y/n)').lower()
+        if quit == 'y':
+            main_menu()
+        elif quit == 'n':
+            exercise_2()
+        else:
+            print("wrong ans, try 'y' or 'n': ")
+
+#exercise 3
+def exercise_3():
+    print('repeat the following letters (don\'t add space after the last letter)')
+    lett = input('a f s d j ; k l \n').lower()
+    if lett == 'a f s d j ; k l':
+        print('well done!!')
+        while True:
+            action = input('try again(a)/ quit(j): ')
+            if action == 'a':
+                exercise_3()
+            elif action == 'j':
+                main_menu()
+            else:
+                print('invalid options')
+                continue
+    else:
+        print('oops!! wrong answer!!')
+        quit = input('do you want to quit? (y/n)').lower()
+        if quit == 'y':
+            main_menu()
+        elif quit == 'n':
+            exercise_3()
+        else:
+            print("wrong ans, try 'y' or 'n': ")
+        
     
 
 
@@ -50,6 +88,8 @@ def main_menu():
         exercise_1()
     elif mode == '2':
         exercise_2()
+    elif mode == '3':
+        exercise_3()
     else:
         print('invalid !!')
 
