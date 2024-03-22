@@ -84,7 +84,7 @@ def exercise_4():
         if tries < 4:
             if rand == 0:
                 print('repeat the following letters (don\'t add space after the last letter)')
-                ans = input('sad')
+                ans = input('sad\n')
                 if ans == 'sad':
                     print('well done')
                     tries += 1
@@ -94,7 +94,7 @@ def exercise_4():
                     continue
             elif rand == 1:
                 print('repeat the following letters (don\'t add space after the last letter)')
-                ans = input('dad')
+                ans = input('dad\n')
                 if ans == 'dad':
                     print('well done')
                     tries += 1
@@ -104,7 +104,7 @@ def exercise_4():
                     continue
             elif rand == 2:
                 print('repeat the following letters (don\'t add space after the last letter)')
-                ans = input('fad')
+                ans = input('fad\n')
                 if ans == 'fad':
                     print('well done')
                     tries += 1
@@ -114,7 +114,7 @@ def exercise_4():
                     continue
             elif rand == 3:
                 print('repeat the following letters (don\'t add space after the last letter)')
-                ans = input('dsf')
+                ans = input('dsf\n')
                 if ans == 'dsf':
                     print('well done')
                     tries += 1
