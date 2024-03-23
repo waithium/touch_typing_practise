@@ -190,10 +190,66 @@ def exercise_5():
                 continue
 
 
+#exercise 6
+def exercise_6():
+    tries = 0
+    while True:
+        rand = random.randint(0, 5)
+        if tries < 4:
+            if rand == 0:
+                print('repeat the following letters (don\'t add space after the last letter)')
+                ans = input('ajskdlf;\n')
+                if ans == 'ajskdlf;':
+                    print('well done')
+                    tries += 1
+                    continue
+                else:
+                    print('wrong ans')
+                    continue
+            elif rand == 1:
+                print('repeat the following letters (don\'t add space after the last letter)')
+                ans = input('jaksld;f\n')
+                if ans == 'jaksld;f':
+                    print('well done')
+                    tries += 1
+                    continue
+                else:
+                    print('wrong ans')
+                    continue
+            elif rand == 2:
+                print('repeat the following letters (don\'t add space after the last letter)')
+                ans = input('a;sldkfj\n')
+                if ans == 'a;sldkfj':
+                    print('well done')
+                    tries += 1
+                    continue
+                else:
+                    print('wrong ans')
+                    continue
+            elif rand == 3:
+                print('repeat the following letters (don\'t add space after the last letter)')
+                ans = input('afj;sdkl\n')
+                if ans == 'afj;sdkl':
+                    print('well done')
+                    tries += 1
+                    continue
+                else:
+                    print('wrong ans')
+                    continue
+        else:
+            action = input('try again(a)/ quit(j): ')
+            if action == 'a':
+                exercise_6()
+            elif action == 'j':
+                main_menu()
+            else:
+                print('invalid options')
+                continue
+
 #main menu
 def main_menu():
     print('what exercise do yu want to want to practise? (q to quit)')
-    mode = input('1.\n2.\n3.\n4.\n5.\n: ')
+    mode = input('1.\n2.\n3.\n4.\n5.\n6.\n: ')
     if mode == 'q' :
         exit()
     elif mode == '1':
@@ -206,6 +262,8 @@ def main_menu():
         exercise_4()
     elif mode == '5':
         exercise_5()
+    elif mode == '6':
+        exercise_6()
     else:
         print('invalid !!')
 
