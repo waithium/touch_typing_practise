@@ -1,16 +1,14 @@
 #touch typing exercise
 import random
 
-#exercise 1
-def exercise_1():
-    print('repeat the following letters (don\'t add space after the last letter)')
-    ans = input('a s d f j k l ; \n').lower()
-    if ans == 'a s d f j k l ;':
+#checking the user input
+def check_ans(ques, ans, func):
+    if ans == ques:
         print('well done!!')
         while True:
             action = input('try again(a)/ quit(j): ')
             if action == 'a':
-                exercise_1()
+                func()
             elif action == 'j':
                 main_menu()
             else:
@@ -22,59 +20,31 @@ def exercise_1():
         if quit == 'y':
             main_menu()
         elif quit == 'n':
-            exercise_1()
+            func()
         else:
             print("wrong ans, try 'y' or 'n': ")
+
+
+#exercise 1
+def exercise_1():
+    print('repeat the following letters (don\'t add space after the last letter)')
+    ques = 'a s d f j k l ;'
+    ans = input('a s d f j k l ; \n').lower()
+    check_ans(ques, ans, exercise_1)
 
 #exercise 2
 def exercise_2():
     print('repeat the following letters (don\'t add space after the last letter)')
-    ans = input('a d s f j l k ; \n').lower()
-    if ans == 'a d s f j l k ;':
-        print('well done!!')
-        while True:
-            action = input('try again(a)/ quit(j): ')
-            if action == 'a':
-                exercise_2()
-            elif action == 'j':
-                main_menu()
-            else:
-                print('invalid options')
-                continue
-    else:
-        print('oops!! wrong answer!!')
-        quit = input('do you want to quit? (y/n)').lower()
-        if quit == 'y':
-            main_menu()
-        elif quit == 'n':
-            exercise_2()
-        else:
-            print("wrong ans, try 'y' or 'n': ")
+    ques = 'a d s f j l k ;'
+    ans = input('a d s f j l k ;\n').lower()
+    check_ans(ques, ans, exercise_2)
 
 #exercise 3
 def exercise_3():
     print('repeat the following letters (don\'t add space after the last letter)')
-    ans = input('a f s d j ; k l \n').lower()
-    if ans == 'a f s d j ; k l':
-        print('well done!!')
-        while True:
-            action = input('try again(a)/ quit(j): ')
-            if action == 'a':
-                exercise_3()
-            elif action == 'j':
-                main_menu()
-            else:
-                print('invalid options')
-                continue
-    else:
-        print('oops!! wrong answer!!')
-        quit = input('do you want to quit? (y/n)').lower()
-        if quit == 'y':
-            main_menu()
-        elif quit == 'n':
-            exercise_3()
-        else:
-            print("wrong ans, try 'y' or 'n': ")
+    ques = 'a f s d j ; k l'
+    ans = input('a f s d j ; k l\n').lower()
+    check_ans(ques, ans, exercise_3)
         
 #exercise 4
 def exercise_4():
@@ -84,6 +54,7 @@ def exercise_4():
         if tries < 4:
             if rand == 0:
                 print('repeat the following letters (don\'t add space after the last letter)')
+                ques = 'sad'
                 ans = input('sad\n').lower
                 if ans == 'sad':
                     print('well done')
