@@ -1,7 +1,7 @@
 #touch typing exercise
 import random
 
-#checking the user input
+#checking the user input type 1
 def check_ans(ques, ans, func):
     if ans == ques:
         print('well done!!')
@@ -47,7 +47,7 @@ def exercise_3():
     check_ans(ques, ans, exercise_3)
         
 
-#checking the user inpout 2
+#checking the user inpout type 2
 def check_ans2(ques, ans, tries):
     if ans == ques:
         print('well done')
@@ -62,7 +62,7 @@ def check_ans2(ques, ans, tries):
 def exercise_4():
     tries = 0
     while tries < 4:
-        rand = random.randint(0, 5)
+        rand = random.randint(0, 4)
         if rand == 0:
             print('repeat the following letters (don\'t add space after the last letter)')
             ques = 'sad'
@@ -92,115 +92,61 @@ def exercise_4():
 #exercise 5
 def exercise_5():
     tries = 0
-    while True:
-        rand = random.randint(0, 5)
-        if tries < 4:
-            if rand == 0:
-                print('repeat the following letters (don\'t add space after the last letter)')
-                ans = input('jlk\n').lower()
-                if ans == 'jlk':
-                    print('well done')
-                    tries += 1
-                    continue
-                else:
-                    print('wrong ans')
-                    continue
-            elif rand == 1:
-                print('repeat the following letters (don\'t add space after the last letter)')
-                ans = input('l;k\n').lower()
-                if ans == 'l;k':
-                    print('well done')
-                    tries += 1
-                    continue
-                else:
-                    print('wrong ans')
-                    continue
-            elif rand == 2:
-                print('repeat the following letters (don\'t add space after the last letter)')
-                ans = input('k;j\n').lower()
-                if ans == 'k;j':
-                    print('well done')
-                    tries += 1
-                    continue
-                else:
-                    print('wrong ans')
-                    continue
-            elif rand == 3:
-                print('repeat the following letters (don\'t add space after the last letter)')
-                ans = input('j;l\n').lower()
-                if ans == 'j;l':
-                    print('well done')
-                    tries += 1
-                    continue
-                else:
-                    print('wrong ans')
-                    continue
+    while tries < 4:
+        rand = random.randint(0, 4)
+        if rand == 0:
+            print('repeat the following letters (don\'t add space after the last letter)')
+            ques = 'jlk'
+        elif rand == 1:
+            print('repeat the following letters (don\'t add space after the last letter)')
+            ques = 'l;k'
+        elif rand == 2:
+            print('repeat the following letters (don\'t add space after the last letter)')
+            ques = 'k;j'
+        elif rand == 3:
+            print('repeat the following letters (don\'t add space after the last letter)')
+            ques = 'j;l'
+        print(ques)
+        ans = input('').lower()
+        correct, tries = check_ans2(ques, ans, tries)
+    else:
+        action = input('try again(a)/ quit(j): ').lower()
+        if action == 'a':
+            exercise_5()
+        elif action == 'j':
+            main_menu()
         else:
-            action = input('try again(a)/ quit(j): ').lower()
-            if action == 'a':
-                exercise_5()
-            elif action == 'j':
-                main_menu()
-            else:
-                print('invalid options')
-                continue
+            print('invalid options')
 
 
 #exercise 6
 def exercise_6():
     tries = 0
-    while True:
-        rand = random.randint(0, 5)
-        if tries < 4:
-            if rand == 0:
-                print('repeat the following letters (don\'t add space after the last letter)')
-                ans = input('ajskdlf;\n').lower()
-                if ans == 'ajskdlf;':
-                    print('well done')
-                    tries += 1
-                    continue
-                else:
-                    print('wrong ans')
-                    continue
-            elif rand == 1:
-                print('repeat the following letters (don\'t add space after the last letter)')
-                ans = input('jaksld;f\n').lower()
-                if ans == 'jaksld;f':
-                    print('well done')
-                    tries += 1
-                    continue
-                else:
-                    print('wrong ans')
-                    continue
-            elif rand == 2:
-                print('repeat the following letters (don\'t add space after the last letter)')
-                ans = input('a;sldkfj\n').lower()
-                if ans == 'a;sldkfj':
-                    print('well done')
-                    tries += 1
-                    continue
-                else:
-                    print('wrong ans')
-                    continue
-            elif rand == 3:
-                print('repeat the following letters (don\'t add space after the last letter)')
-                ans = input('afj;sdkl\n').lower()
-                if ans == 'afj;sdkl':
-                    print('well done')
-                    tries += 1
-                    continue
-                else:
-                    print('wrong ans')
-                    continue
+    while tries < 4:
+        rand = random.randint(0, 4)
+        if rand == 0:
+            print('repeat the following letters (don\'t add space after the last letter)')
+            ques = 'ajskdlf;'
+        elif rand == 1:
+            print('repeat the following letters (don\'t add space after the last letter)')
+            ques = 'jaksld;f'
+        elif rand == 2:
+            print('repeat the following letters (don\'t add space after the last letter)')
+            ques = 'a;sldkfj'
+        elif rand == 3:
+            print('repeat the following letters (don\'t add space after the last letter)')
+            ques = 'afj;sdkl'
+        print(ques)
+        ans = input('').lower()
+        correct, tries = check_ans2(ques, ans, tries)
+    else:
+        action = input('try again(a)/ quit(j): ').lower()
+        if action == 'a':
+            exercise_6()
+        elif action == 'j':
+            main_menu()
         else:
-            action = input('try again(a)/ quit(j): ').lower()
-            if action == 'a':
-                exercise_6()
-            elif action == 'j':
-                main_menu()
-            else:
-                print('invalid options')
-                continue
+            print('invalid options')
 
 #main menu
 def main_menu():
